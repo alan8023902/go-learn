@@ -1,0 +1,5 @@
+[
+    {"type":"email","enabled": true},
+    {"type":"sms","enabled": true},
+    {"type":"ai","enabled": false}
+]
