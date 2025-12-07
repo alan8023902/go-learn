@@ -1,0 +1,30 @@
+工号：30003899
+姓名: alan
+问题描述：
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .vscode/settings.json
+#	new file:   CURSOR_SHORTCUTS.md
+#	new file:   fix-gopls-install.ps1
+#	new file:   go.mod
+#	new file:   go.sum
+#	new file:   gopls-install-guide.md
+#	new file:   setup-go-env.ps1
+#	new file:   setup-go-from-zip.ps1
+#	new file:   src/hello/README.md
+#	new file:   src/main.go
+#	new file:   src/notifier/aichat.go
+#	new file:   src/notifier/config.json
+#	new file:   src/notifier/email.go
+#	new file:   src/notifier/factory.go
+#	new file:   src/notifier/notifier.go
+#	new file:   src/notifier/sms.go
+#	new file:   src/order/order.go
+#	new file:   src/user/user.go
+#

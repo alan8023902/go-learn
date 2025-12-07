@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -221,7 +222,34 @@ func main() {
 		fmt.Println("---------------------------")
 	}
 
+	for i := 1; i <= 10; i++ {
+		// 启动10 个 goroutine
+		go func(n int) {
+			fmt.Println("启动任务：", n)
+		}(i)
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println("主协程结束")
+
+	jobs := make(chan int, 5)
+
+	go func() {
+		for i := 1; i <= 10; i++ {
+			fmt.Println("生产任务：", i)
+			jobs <- i
+			time.Sleep(100 * time.Millisecond) // 控制生产速度
+		}
+		close(jobs)
+	}()
+
+	for job := range jobs {
+		fmt.Println("消费任务", job)
+		time.Sleep(500 * time.Millisecond)
+	}
+
 	startWebServer()
+
 }
 
 func add(a int, b int) int {
